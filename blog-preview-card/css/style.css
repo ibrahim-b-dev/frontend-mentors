@@ -1,4 +1,10 @@
-/* The font sizes in this project are slightly smaller in the mobile layout. Find a way to reduce font size for smaller screens without using media queries. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-display: swap;
@@ -13,31 +19,31 @@ img {
 }
 
 .text-preset-1 {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 1.4375rem;
+  font-weight: 800;
   line-height: 1.5;
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
 }
 
 .text-preset-2 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
 }
 
 .text-preset-3 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
 }
 
 .text-preset-3-bold {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 0px;
+  letter-spacing: 0rem;
 }
 
 .container {
@@ -52,9 +58,8 @@ img {
 }
 
 .component {
-  height: 501px;
-  max-width: 327px;
-  padding: 24px;
+  width: 20.4375rem;
+  padding: 1.5rem;
   border-radius: 20px;
   background-color: #fff;
   border: 1px solid black;
@@ -66,25 +71,26 @@ img {
 }
 
 .content-container {
-  margin: 24px 0;
+  margin: 1.5rem 0;
 }
 
 .content-tag {
-  height: 26px;
-  width: 73px;
+  height: 1.8125rem;
+  width: 5.125rem;
   background-color: #F4D04E;
   text-align: center;
+  line-height: 1.8125rem;
   border-radius: 4px;
   color: #111111;
 }
 
 .content-date {
-  margin: 12px 0;
+  margin: 0.75rem 0;
   color: #111111;
 }
 
 .content-title {
-  margin: 12px 0;
+  margin-bottom: 0.75rem;
   color: #111111;
 }
 
@@ -93,13 +99,14 @@ img {
 }
 
 .author-container {
-  display: flex; 
+  display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .author-avatar {
-  margin-right: 10px;
-  
+  margin-right: 0.75rem;
+
 }
 
 .author-name {
