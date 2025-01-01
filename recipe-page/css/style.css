@@ -1,0 +1,322 @@
+/* ================================
+  Global Styles & Reset
+================================ */
+:root {
+  /* Layout */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  /* Typography */
+  --font-primary: "Young Serif", serif;
+  --font-secondary: "Outfit", serif;
+
+  --font-size-body: 16px;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--stone-900);
+  background-color: var(--stone-100);
+  line-height: 1.5;
+}
+
+img {
+  /* Removes unwanted inline spacing */
+  display: block;
+
+  /* Prevents images from exceeding their natural size */
+  max-width: 100%;
+
+  /* Scales the image to fit the container */
+  width: 100%;
+
+  /* Maintains the aspect ratio */
+  height: auto;
+}
+
+ol {
+  /* list-style-type: decimal; */
+}
+
+ul {
+  /* list-style-type: disc; */
+}
+
+li {
+  /* list-style-position: inside; */
+}
+
+p {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--stone-600);
+  text-align: left;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+/* ================================
+  Typography
+================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+}
+
+/* ================================
+  Preparation Section Style
+================================ */
+.recipe {
+  background-color: var(--white);
+  padding: 2rem;
+}
+
+.recipe-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-figure {
+  /* width: 100vw; */
+}
+
+.preparation-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: var(--rose-50);
+  border-radius: 8px;
+}
+
+.preparation-section-title {
+  color: var(--rose-800);
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+
+.preparation-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.preparation-list li {
+  position: relative;
+  padding-left: 1.7em;
+  margin-bottom: 0.7em;
+}
+
+.preparation-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--stone-600);
+  font-size: 1.5em;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--brown-800);
+  margin: 1rem 0;
+}
+
+/* ================================
+  Ingredients Section Style
+================================ */
+.ingredients-section {}
+
+.ingredients-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ingredients-list li {
+  position: relative;
+  padding-left: 1.7em;
+  margin-bottom: 0.7em;
+}
+
+.ingredients-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--stone-600);
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+/* ================================
+Instructions Section Style
+================================ */
+.instructions-section {}
+
+.instructions-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.instructions-list li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 1em;
+}
+
+.instructions-list li::before {
+  content: counter(list-item) ".";
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* ================================
+Nutrition Section Style
+================================ */
+.nutrition-section {}
+
+.nutrition-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.nutrition-table tr:not(:last-child) {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid var(--stone-100);
+}
+
+.nutrition-table td {
+  font-weight: var(--font-weight-bold);
+  color: var(--rose-800);
+}
+
+/* ================================
+  Responsive Layout
+================================ */
+.container {
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+}
+
+/* Mobile-First Design */
+@media (min-width: 320px) {
+  .container {
+    max-width: var(--mobile-width);
+    padding: 5rem 0;
+  }
+  
+  .recipe {
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .recipe-figure {
+    border-radius: 15px;
+  }
+}
+
+/* ================================
+  Utility Classes
+================================ */
+.text-white {
+  color: var(--white);
+}
+
+.text-stone-600 {
+  color: var(--stone-600);
+}
+
+.text-stone-900 {
+  color: var(--stone-900);
+}
+
+.text-rose-800 {
+  color: var(--rose-800);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-stone-100 {
+  background-color: var(--stone-100);
+}
+
+.bg-rose-50 {
+  background-color: var(--rose-50);
+}
+
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+/* ================================
+  Example Usage
+================================ */
+/*
+<header class="bg-white text-center">
+  <h1 class="font-primary text-rose-800">Welcome</h1>
+  <p class="text-stone-600">This is a demo page</p>
+</header>
+*/

@@ -1,0 +1,23 @@
+ul {
+  list-style: none; 
+  /* Remove default markers */
+  padding-left: 0; 
+  /* Remove default padding */
+}
+
+li {
+  position: relative;
+  padding-left: 1.5em; 
+  /* Space for custom marker */
+}
+
+li::before {
+  content: "•"; 
+  /* Custom marker (e.g., bullet) */
+  position: absolute;
+  left: 0;
+  color: #0078D7; 
+  /* Marker color */
+  font-size: 1.2em; 
+  /* Marker size */
+}
